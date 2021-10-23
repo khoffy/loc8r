@@ -10,15 +10,20 @@ html
     nav.navbar.fixed-top.navbar-expand-md.navbar-light
       .container-fluid
         a.navbar-brand(href='/') Loc8r
-          button.navbar-toggler(type='button', data-toggle='collapse', 
-            data-target='#navbarMain')
-            span.navbar-toggler-icon
-            #navbarMain.navbar-collapse.collapse
-        ul.navbar-nav.mr-auto
-          li.nav-item
-            a.nav-link(href='/about/') About
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', 
+          data-bs-target='#navbarMain')
+          span.navbar-toggler-icon
+            span.caret
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link(href='/about/') About
   .container-fluid
     block content
+    footer 
+      .row 
+        .col-12 
+          small &copy; Getting Mean - Khoffy TIPOH / Rue des Briquetiers 2021
       script(
         src='https://code.jquery.com/jquery-3.3.1.slim.min.js',
         integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo',
@@ -28,3 +33,4 @@ html
         integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49',
         crossorigin='anonymous')
       script(src='/javascripts/bootstrap.min.js')
+      script(src='/javascripts/bootstrap.min.js.map')
