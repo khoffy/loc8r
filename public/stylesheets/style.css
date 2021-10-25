@@ -105,6 +105,10 @@ a:hover {
   color:#fff
 }
 
+#map {
+  height: 100%;
+}
+
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: #fff;
