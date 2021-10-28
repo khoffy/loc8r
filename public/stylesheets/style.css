@@ -109,6 +109,10 @@ a:hover {
   height: 100%;
 }
 
+.form-group {
+  margin-bottom: 10px;
+}
+
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: #fff;

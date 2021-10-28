@@ -1,6 +1,6 @@
 /* Get homepage */
 const about = (req, res) => {
-        res.render('index', { title: 'Express++', name: "About"});
+        res.render('generic-text', { title: "About"});
 }
 
 module.exports = {
