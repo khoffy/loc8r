@@ -6,6 +6,8 @@ const homelist = (req, res) => {
             title: 'Loc8r',
             strapline: 'Trouvez des endroits pour travailler avec le wifi près de chez vous !'
         },
+        sidebar: "À  la recherche d'un wifi et d'une place assise ? Loc8r vous aide à trouver des endroits " + 
+        "pour travailler quand vous êtes dehors. Peut-être avec un café, un croissant ou un gateau ?" ,
         locations: [{
             name: 'Starcups',
             address: '125 High Street, Reading, RG6 1PS',
@@ -32,7 +34,17 @@ const homelist = (req, res) => {
 
 /* GET 'Location info' page*/
 const locationInfo = (req, res) => {
-    res.render('location-info', { title: 'Location info'});
+    res.render('location-info', { 
+        title: 'Location info',
+        location: {
+            name: 'Starcups',
+            address: '125 High Street, Reading, RG6 1PS',
+            rating: 3,
+            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+            openingHours: ['Lundi - Vendredi: 7h - 19h', 'Samedi: 8h - 17h', 'Dimanche: fermé'],
+            distance: '100m'
+        }
+    });
 };
 
 /* GET 'Add review' page */

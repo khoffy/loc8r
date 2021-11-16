@@ -1,41 +1,31 @@
 extends layout 
 
+include _includes/sharedHTMLfunctions
+
 block content
     .row.banner 
         .col-12 
-            h1 Starcups 
+            h1= location.name 
     .row 
         .col-12.col-lg-9 
             .row 
                 .col-12.col-md-6 
                     p.rating 
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.far.fa-star
-                        i.far.fa-star
-                    p 125 High Street, Reading, RG6 1PS
+                        +outputRating(location.rating)
+                    p= location.address
                     .card.card-primary 
                         .card-block 
                             h2.card-title Heures d'ouverture
-                            p.card-text Lundi - Vendredi : 7h - 19h
-                            p.card-text Samedi : 8h - 17h
-                            p.card-text Dimanche : fermé 
+                            each openingHour in location.openingHours
+                                p.card-text= openingHour
                     .card.card-primary 
-                        .acard-block 
-                            h2.card-title Consommations 
-                            span.badge.badge-warning 
-                                i.fa.fa-check 
-                                | &nbsp;Boissons chaudes 
-                            | &nbsp;
-                            span.badge.badge-warning 
-                                i.fa.fa-check 
-                                | &nbsp;Nourriture 
-                            | &nbsp;
-                            span.badge.badge-warning 
-                                i.fa.fa-check 
-                                | &nbsp;Wifi premium 
-                            | &nbsp;
+                        .card-block 
+                            h2.card-title Consommations
+                            each facility in location.facilities
+                                span.badge.badge-warning 
+                                    i.fa.fa-check= facility
+                                    | &nbsp;
+                                | &nbsp;
                 .col-12.col-md-6.location-map 
                     .card.card-primary 
                         .card-block 
