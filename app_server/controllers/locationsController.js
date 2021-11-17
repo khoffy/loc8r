@@ -43,7 +43,21 @@ const locationInfo = (req, res) => {
             facilities: ['Hot drinks', 'Food', 'Premium wifi'],
             openingHours: ['Lundi - Vendredi: 7h - 19h', 'Samedi: 8h - 17h', 'Dimanche: fermé'],
             distance: '100m'
-        }
+        },
+        comments: [
+            {
+                author: 'Simon Holmes',
+                rating: 4,
+                date: '25 October 2021',
+                comment: 'Quel agréable endroit!'
+            },
+            {
+                author: 'Charlie Chaplin',
+                rating: 3,
+                date: '23 October 2021',
+                comment: 'C\'était cool. Le café n\'etait pas au top.'
+            }
+        ]
     });
 };
 
