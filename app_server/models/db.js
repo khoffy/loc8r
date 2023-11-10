@@ -1,6 +1,9 @@
 const { default: mongoose } = require("mongoose");
 
-const dbURI = 'mongodb://localhost/Loc8r';
+let dbURI = 'mongodb://localhost/Loc8r';
+if(process.env.NODE_ENV == 'production') {
+    dbURI = process.env.MONGODB_URI;
+}
 mongoose.connect(dbURI);
 
 // Monitors for a successful connection through Mongoose
