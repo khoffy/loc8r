@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const Loc = mongoose.model('Location')
 
 const reviewsCreate = (req, res) => {
-
     res
         .status(200)
         .json({"content": "Success - reviewsCreate"});
@@ -28,7 +27,7 @@ const reviewsReadOne = (req, res) => {
             if(location.reviews && location.reviews.length > 0) {
 
                 const review = location.reviews.id(req.params.reviewId);
-                
+
                 if(!review) {
                     return res
                         .status(404)
